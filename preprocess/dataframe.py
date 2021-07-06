@@ -29,6 +29,11 @@ def replace():
 def astype():
     df[column] = df[column].astype(float) 
     
+def to_datetime(column, format):
+    # ex; pd.to_datetime(df[column], format='%Y%m%d%H%M%S')
+    df[column] = pd.to_datetime(df[column], format=format)
+
+    
 
 ############ 条件絞り込み #############
 # ある条件で絞った値を取り出すときは、条件を一度変数に代入するとわかりやすい
