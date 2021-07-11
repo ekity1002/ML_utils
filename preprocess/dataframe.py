@@ -1,4 +1,12 @@
 import pandas as pd
+
+###############値の取得##################
+def get_column_index():
+    """dfのある名前の column のインデックスを取得"""
+    col_indices = df.columns.get_loc(col)
+    df.loc[:, col_indices]
+
+
 def concat_row(df, columns, sep=','):
     """DFのカラムの各行を結合する
     テキストカラムの結合など
